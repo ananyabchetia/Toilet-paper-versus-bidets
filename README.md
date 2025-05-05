@@ -21,3 +21,13 @@ This <a href="https://drive.google.com/file/d/1IOBDcixSgD5Lgz2gT3UmPb0i4EIvI4bs/
 ## Challenges
 
 There was a unique but exciting challenge of having sources share their stories. Toilet talk is fun, but not everyone is ready to share their story. I learned to explain the importance of this piece to sources and I am grateful to them for sharing their story!
+
+Data collection was slightly difficult as there is not a vast amount of reeseatch on the toilet paper market, the enviromental impacts of toilet paper and the preference of toilet paper versus bidets. That being said, I relied on Google Trends data to show the popularity of bidet searches, the 2022 study and nonprofits that provided the latest statistics on tree loss from toilet paper.
+
+## Gratitude
+
+Thank you to my sources and to png.com for providing the first images you see on the title card!
+
+## Contact
+
+If you enjoyed the piece or want to chat, feel free to reach me at ac5708@columbia.edu or on <a href="https://www.linkedin.com/in/ananya-chetia-a94121183/">LinkedIn</a>!
