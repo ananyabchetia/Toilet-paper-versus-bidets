@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toilet paper vs. bidet</title>
+    <link rel="icon" type="image/png" href="toilet_seat.png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Chalkduster';
+            src: local('Chalkduster'),
+                local('Skia'),
+                url('path-to-your-chalkduster-font.woff2') format('woff2'),
+                url('path-to-your-chalkduster-font.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <style>
+
+    a {
+        color: #530e0e;
+        text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            background-color: #fff3d7;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .headline {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            letter-spacing: -0.3px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #530e0e;
+        }
+
+        .subtitle {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #530e0e;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .intro-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            display: table;
+            background-color: #fff3d7;
+            z-index: -1;
+        }
+
+        .header-content {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .floating-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .icon {
+            position: absolute;
+            opacity: 0.7;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .icon1 {
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: 15%;
+            background-image: url('toilet.png');
+            animation: floating 25s infinite linear;
+        }
+
+        .icon2 {
+            width: 180px;
+            height: 180px;
+            top: 65%;
+            left: 75%;
+            background-image: url('spray.png');
+            animation: floating 20s infinite linear;
+            animation-delay: -5s;
+        }
+
+        .icon3 {
+            width: 100px;
+            height: 100px;
+            top: 25%;
+            left: 80%;
+            background-image: url('bidet_bowl.png');
+            transform: rotate(15deg);
+            animation: floating 30s infinite linear;
+            animation-delay: -15s;
+        }
+
+        .icon4 {
+            width: 400px;
+            height: 400px;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            background-image: url('toilet_seat.png');
+            animation: floatUpDown 4s ease-in-out infinite;
+        }
+
+        .content-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #fff3d7;
+            margin-top: 100vh;
+            z-index: 1;
+        }
+
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+        }
+
+
+        .bidet-container {
+            max-width: 100%;
+            margin: 2em auto;
+            font-family: 'Chalkduster', 'Skia', cursive, sans-serif;
+            position: relative;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .label {
+            position: absolute;
+            color: #000;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .hand-held {
+            top: 10%;
+            left: 17%;
+        }
+
+        .bidet-attachments {
+            top: 42%;
+            left: 55%;
+        }
+
+        .stand-alone {
+            top: 86%;
+            left: 8%;
+        }
+
+
+        @media screen and (min-width: 700px) {
+            .label {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 699px) and (min-width: 490px) {
+            .label {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 489px) {
+            .headline {
+                font-size: 36px;
+            }
+
+            .label {
+                font-size: 14px;
+            }
+        }
+
+
+        #g-toilets_1-box,
+        #g-toilets_1-box .g-artboard {
+            margin: 0 auto;
+        }
+
+        #g-toilets_1-box p {
+            margin: 0;
+        }
+
+        #g-toilets_1-box .g-aiAbs {
+            position: absolute;
+        }
+
+        #g-toilets_1-box .g-aiImg {
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 100% !important;
+        }
+
+        #g-toilets_1-full p {
+            font-family: 'Chalkduster', 'Skia', cursive, sans-serif;
+            font-weight: regular;
+            line-height: 22px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 18px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+
+        #g-toilets_1-full .g-pstyle0 {
+            font-weight: 400;
+            height: 22px;
+        }
+
+        #g-toilets_1-full .g-pstyle1 {
+            font-weight: 400;
+            line-height: 14px;
+            height: 14px;
+            font-size: 12px;
+        }
+
+        #g-toilets_1-full .g-pstyle2 {
+            font-weight: 400;
+            line-height: 21px;
+            height: 21px;
+        }
+
+        #g-toilets_1-full .g-cstyle0 {
+            font-size: 12px;
+        }
+
+        #g-toilets_1-medium p {
+            font-family: 'Chalkduster', 'Skia', cursive, sans-serif;
+            font-weight: regular;
+            line-height: 17px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 14px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+
+        #g-toilets_1-medium .g-pstyle0 {
+            font-weight: 400;
+            height: 17px;
+        }
+
+        #g-toilets_1-medium .g-pstyle1 {
+            font-weight: 400;
+            line-height: 16px;
+            height: 16px;
+        }
+
+        #g-toilets_1-medium .g-cstyle0 {
+            font-size: 10px;
+        }
+
+        #g-toilets_1-medium .g-cstyle1 {
+            font-size: 9px;
+        }
+
+        #g-toilets_1-mobile p {
+            font-family: 'Chalkduster', 'Skia', cursive, sans-serif;
+            font-weight: regular;
+            line-height: 16px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 14px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+
+        #g-toilets_1-mobile .g-pstyle0 {
+            font-weight: 400;
+            height: 16px;
+        }
+
+        #g-toilets_1-mobile .g-pstyle1 {
+            font-weight: 400;
+            line-height: 17px;
+            height: 17px;
+        }
+
+        #g-toilets_1-mobile .g-cstyle0 {
+            font-size: 10px;
+        }
+
+        #g-toilets_1-mobile .g-cstyle1 {
+            font-size: 9px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            20% {
+                transform: translate(50px, 20px) rotate(72deg);
+            }
+
+            40% {
+                transform: translate(100px, -30px) rotate(144deg);
+            }
+
+            60% {
+                transform: translate(50px, -50px) rotate(216deg);
+            }
+
+            80% {
+                transform: translate(-30px, -20px) rotate(288deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        @keyframes floatUpDown {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-50%, -54%);
+            }
+
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="intro-header">
+            <div class="floating-icons">
+                <div class="icon icon1"></div>
+                <div class="icon icon2"></div>
+                <div class="icon icon3"></div>
+                <div class="icon icon4"></div>
+            </div>
+            <div class="header-content">
+                <h1 class="headline">Flush out the truth:</h1>
+                <h1 class="headline">Will you roll with toilet paper or bidets?</h1>
+                <p class="subtitle">By: <a href='https://ananyabchetia.github.io/'target="_blank">Ananya Chetia</a></p>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content">
+                <p>Shooting water to clear the rear remains unusual because majority of Americans roll with toilet
+                    paper.</p>
+                <p>One alternative to just wiping with paper is the bidet. The device comes in various shapes with one
+                    purpose, to
+                    clean
+                    one's buttocks and surrounding area with water. Sometimes the bidet is a hand-held spray attached to
+                    the toilet
+                    that
+                    uses a home's water supply. Other times, it is a separate bowl that looks like a sink for one to
+                    sit. This is
+                    the type
+                    of bidet 65-year-old Amy Gruesekin saw thirteen years ago in a rented apartment in Paris.</p>
+                <p>"We just didn't use it. We weren't used to using them," Gruesekin said. She now carries a portable
+                    bidet whenever
+                    she
+                    travels.</p>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 20px;
+                    }
+
+                    .chart-container {
+                        position: relative;
+                        max-width: 1000px;
+                        margin: 0 auto;
+                    }
+
+                    .bidet-container {
+                        position: relative;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    .g-artboard {
+                        position: relative;
+                        margin: 0 auto;
+                    }
+
+                    .responsive-image {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+
+                    .g-aiAbs {
+                        position: absolute;
+                    }
+
+                    .g-aiPointText {
+                        pointer-events: none;
+                    }
+
+                    /* Text styles */
+                    .g-pstyle0,
+                    .g-pstyle1,
+                    .g-pstyle2 {
+                        font-family: "Chalkduster", "Comic Sans MS", cursive;
+                        font-size: 18px;
+                        line-height: 1.2;
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        cursor: pointer;
+                        transition: transform 0.2s ease;
+                    }
+
+                    .label:hover {
+                        transform: scale(1.05);
+                    }
+
+                    /* D3 SVG Styles */
+                    svg {
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    .node text {
+                        font-family: "Chalkduster", "Comic Sans MS", cursive;
+                        font-size: 14px;
+                        font-weight: 700;
+                        fill: #333;
+                    }
+
+                    .node image {
+                        cursor: pointer;
+                    }
+
+
+                    #combined-visualization {
+                        position: relative;
+                        width: 100%;
+                    }
+
+                    #svg-visualization {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                    }
+
+                    #html-visualization {
+                        position: relative;
+                        z-index: 1;
+                    }
+                </style>
+                </head>
+
+                <body>
+                    <div class="chart-container">
+                        <h1></h1>
+
+                        <div id="combined-visualization">
+
+                            <div id="svg-visualization"></div>
+
+
+                            <div id="html-visualization">
+
+
+                                <div id="g-toilets_1-box" class="ai2html bidet-container">
+                                    <div id="g-toilets_1-full" class="g-artboard"
+                                        style="width:700px; height:450.499999999999px;" data-aspect-ratio="1.554"
+                                        data-min-width="700">
+                                        <div style=""></div>
+                                        <img id="g-toilets_1-full-img"
+                                            class="g-toilets_1-full-img g-aiImg responsive-image" alt=""
+                                            src="toilets_1-full.jpg" />
+                                        <div id="g-ai0-1"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label hand-held"
+                                            style="top:9.3311%;margin-top:-17px;left:17.5707%;width:257px;">
+                                            <p class="g-pstyle0">Hand-held bidet spray<span class="g-cstyle0"> </span>
+                                            </p>
+                                        </div>
+                                        <div id="g-ai0-3"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label bidet-attachments"
+                                            style="top:38.8617%;margin-top:-1.3px;left:55.3862%;width:200px;">
+                                            <p class="g-pstyle2">Bidet attachments</p>
+                                        </div>
+                                        <div id="g-ai0-4"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label stand-alone"
+                                            style="top:83.3566%;margin-top:-3px;left:8.4922%;width:221px;">
+                                            <p class="g-pstyle0">Stand alone bidets<span class="g-cstyle0"> </span></p>
+                                        </div>
+                                    </div>
+
+                                    <div id="g-toilets_1-medium" class="g-artboard"
+                                        style="width:490px; height:350px; display:none;" data-aspect-ratio="1.4"
+                                        data-min-width="490" data-max-width="699">
+                                        <div style=""></div>
+                                        <img id="g-toilets_1-medium-img"
+                                            class="g-toilets_1-medium-img g-aiImg responsive-image" alt=""
+                                            src="toilets_1-medium.jpg" />
+                                        <div id="g-ai1-1"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label hand-held"
+                                            style="top:12.1197%;margin-top:-13.4px;left:16.1348%;width:211px;">
+                                            <p class="g-pstyle0">Hand-held bidet spray<span class="g-cstyle0"> </span>
+                                            </p>
+                                        </div>
+                                        <div id="g-ai1-2"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label bidet-attachments"
+                                            style="top:28.1367%;margin-top:-12px;left:67.3559%;width:164px;">
+                                            <p class="g-pstyle1">Bidet attachments</p>
+                                        </div>
+                                        <div id="g-ai1-3"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label stand-alone"
+                                            style="top:85.1039%;margin-top:-13.4px;left:9.1356%;width:180px;">
+                                            <p class="g-pstyle0">Stand alone bidets<span class="g-cstyle1"> </span></p>
+                                        </div>
+                                    </div>
+
+                                    <div id="g-toilets_1-mobile" class="g-artboard"
+                                        style="max-width: 375px;max-height: 471px; display:none;"
+                                        data-aspect-ratio="0.797" data-min-width="0" data-max-width="489">
+                                        <div style="padding: 0 0 125.5467% 0;"></div>
+                                        <img id="g-toilets_1-mobile-img"
+                                            class="g-toilets_1-mobile-img g-aiImg responsive-image" alt=""
+                                            src="toilets_1-mobile.jpg" />
+                                        <div id="g-ai2-1"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label hand-held"
+                                            style="top:21.9366%;margin-top:-12.3px;left:1.7648%;width:201px;">
+                                            <p class="g-pstyle0">Hand-held bidet spray<span class="g-cstyle0"> </span>
+                                            </p>
+                                        </div>
+                                        <div id="g-ai2-2"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label stand-alone"
+                                            style="top:36.186%;margin-top:-13.4px;left:50.4414%;width:180px;">
+                                            <p class="g-pstyle1">Stand alone bidets<span class="g-cstyle1"> </span></p>
+                                        </div>
+                                        <div id="g-ai2-3"
+                                            class="g-ai2html-settings g-aiAbs g-aiPointText label bidet-attachments"
+                                            style="top:91.5154%;margin-top:-12px;left:34.8708%;width:164px;">
+                                            <p class="g-pstyle0">Bidet attachments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        document.addEventListener('DOMContentLoaded', function () {
+
+                            const width = 700;
+                            const height = 450;
+
+                            // Create SVG
+                            const svg = d3.select("#svg-visualization")
+                                .append("svg")
+                                .attr("width", width)
+                                .attr("height", height)
+                                .attr("viewBox", `0 0 ${width} ${height}`)
+                                .attr("preserveAspectRatio", "xMidYMid meet");
+
+                            // Sample data for bidet types
+                            const nodes = [
+                                { name: "Hand-held bidet spray", x: 120, y: 50, image: "handheld_bidet.png" },
+                                { name: "Bidet attachments", x: 380, y: 180, image: "bidet_attachment.png" },
+                                { name: "Stand alone bidet", x: 120, y: 380, image: "standalone_bidet.png" }
+                            ];
+
+                            // Create node groups
+                            const nodeGroups = svg.selectAll(".node")
+                                .data(nodes)
+                                .enter()
+                                .append("g")
+                                .attr("class", "node")
+                                .attr("transform", d => `translate(${d.x},${d.y})`);
+
+                            // Add images
+                            nodeGroups.append("image")
+                                .attr("xlink:href", d => d.image)
+                                .attr("width", 80)
+                                .attr("height", 80)
+                                .attr("x", -40)
+                                .attr("y", -40);
+
+                            // Add labels
+                            nodeGroups.append("text")
+                                .attr("x", (d) => {
+                                    // Adjust position for specific labels
+                                    if (d.name === "Bidet attachments") {
+                                        return d.x - 15; // Move left by 15px
+                                    } else if (d.name === "Stand alone bidet") {
+                                        return d.x;
+                                    } else {
+                                        return d.x;
+                                    }
+                                })
+                                .attr("y", (d) => {
+                                    // Adjust position for specific labels
+                                    if (d.name === "Bidet attachments") {
+                                        return d.y - 10; // Move up by 10px
+                                    } else if (d.name === "Stand alone bidet") {
+                                        return d.y - 10; // Move up by 10px
+                                    } else {
+                                        return d.y;
+                                    }
+                                })
+                                .attr("text-anchor", "middle")
+                                .attr("dy", "3em")
+                                .text(d => d.name);
+
+
+                            function resizeChart() {
+                                const containerWidth = document.querySelector('.chart-container').clientWidth;
+                                const scale = Math.min(containerWidth / width, 1);
+
+                                svg.attr("width", width * scale)
+                                    .attr("height", height * scale);
+                            }
+
+
+                            resizeChart();
+                            window.addEventListener('resize', resizeChart);
+                        });
+
+
+                        (function () {
+
+                            function resizeGraphic() {
+                                var width = window.innerWidth;
+                                var full = document.getElementById('g-toilets_1-full');
+                                var medium = document.getElementById('g-toilets_1-medium');
+                                var mobile = document.getElementById('g-toilets_1-mobile');
+
+                                if (width >= 700) {
+                                    full.style.display = 'block';
+                                    medium.style.display = 'none';
+                                    mobile.style.display = 'none';
+                                } else if (width >= 490) {
+                                    full.style.display = 'none';
+                                    medium.style.display = 'block';
+                                    mobile.style.display = 'none';
+                                } else {
+                                    full.style.display = 'none';
+                                    medium.style.display = 'none';
+                                    mobile.style.display = 'block';
+                                }
+                            }
+
+
+                            window.addEventListener('load', resizeGraphic);
+                            window.addEventListener('resize', resizeGraphic);
+                        })();
+                    </script>
+
+                    <p>The pandemic left <a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC8520319/'target="_blank">panicked</a>
+                        consumers
+                        to purchase
+                        toilet papers in bulk and several newsrooms reported on a national
+                        shortage. At Wegmans, employees limited how many toilet rolls Grueskin and her husband could
+                        purchase. That's
+                        when
+                        Grusekin made the call, it was time to get a bidet.</p>
+                    <p>"Five years, it's never failed us. And it does warm water as well," she said.</p>
+                    <p>The couple got the Brondel's SouthSpa option, a bidet attachment to the left of the toilet with
+                        the
+                        nozzle hooked
+                        at the
+                        back of the toilet bowl that sprays water. Grueskin said she and her husband can't go back to
+                        just
+                        using toilet
+                        paper
+                        after the bidet is set up. "How would you remove ketchup from a wall? With paper or would you
+                        actually clean
+                        it?"
+                        Grueskin said.</p>
+                    <p>A report from <a href='https://health.clevelandclinic.org/is-using-a-bidet-healthy'target="_blank">Cleveland
+                            Clinic</a> suggests
+                        bidets are cleaner than toilet paper because "water can top a few squares of dry
+                        toilet paper in removing trace amounts of fecal matter after you poop." A <a
+                            href='https://pubmed.ncbi.nlm.nih.gov/35100172/'target="_blank">2022 study</a> also found
+                        bidets reduced
+                        microbial
+                        contamination in fingers compared to those using toilet paper after pooping.</p>
+                    <p>Bidets were most searched on Google in March 2020, at the start of the pandemic. There was a
+                        boost in
+                        bidet sales
+                        that
+                        year too, said Jason Ojalvo, former CEO of bidet company TUSHY for the <a
+                            href='https://www.latimes.com/lifestyle/story/2020-03-16/bidet-sales-spike-as-consumers-panic-buy-toilet-paper'target="_blank">LA
+                            Times.</a> Ojalvo predicted that the high bidet sales “could be the tipping point that finally gets Americans to adopt the bidet.”
+                    </p>
+                    <p>“The reality is, once you use a bidet to clean after pooping you cannot go back to wiping and toilet paper. You've
+                    learned too much! Wiping seems not just inefficient, but also barbaric, by comparison,” the former CEO said during the
+                    pandemic.</p>
+                    <iframe title="Bidet searches on Google peaked at the start of the pandemic"
+                        aria-label="Interactive line chart" id="datawrapper-chart-htSxP"
+                        src="https://datawrapper.dwcdn.net/htSxP/1/?transparent=true" scrolling="no" frameborder="0"
+                        style="width: 0; min-width: 100% !important; border: none;" height="460"
+                        data-external="1"></iframe>
+                    <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r, i = 0; r = e[i]; i++)if (r.contentWindow === a.source) { var d = a.data["datawrapper-height"][t] + "px"; r.style.height = d } } })) }();
+                    </script>
+                    <p>Ojalvo is not wrong, the bidet industry has grown and is set to be at <a href='https://www.thebusinessresearchcompany.com/report/bidets-global-market-report#:~:text=What%20Is%20The%20Bidets%20Market,focus%20on%20cleanliness%20and%20sanitation.'target="_blank">$30.56 billion</a> by 2025. But that is a timid value
+                    compared to the <a href='https://www.google.com/search?q=%24120.49+billion+toilet+paper+industry&oq=%24120.49+billion+toilet+paper+industry&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigAdIBBzI3NmowajSoAgCwAgE&sourceid=chrome&ie=UTF-8'target="_blank">$120.49 billion</a> toilet paper industry.</p>
+                <p><a href='https://www.mentalfloss.com/article/23210/toilet-paper-history-how-america-convinced-world-wipe'>Joseph Gayetty</a> invented the first commercially available roll of toilet paper in 1857 and toilet paper has left its
+                stain on the United States since. The product first became highly popular when corporation Hoberg Paper sold Charmin
+                toilet paper with the <a href= 'https://www.hearthstonemuseum.org/flushed-with-success#:~:text=1964.%20In%20the%201950%2C%20Hoberg%20Paper%20changed,century%20by%20introducing%20the%20character%20of%20Mr.'target="_blank">“Charmin lady”</a> logo in 1928 and later the “Charmin baby” to emphasize toilet paper's softness. The
+                product's legacy in American bathrooms can explain why many rely on wiping with paper, despite water being commonly used to
+                clean other parts of the body.</p>
+        <img src="toilets.png" alt="Illustration showing the history and environmental impact of toilet paper"
+            style="max-width: 100%; height: auto; display: block; margin: 1rem auto;">
+                <p>The preference for toilet paper is not unanimous. <a href='https://www.nrdc.org/bio/jennifer-skene/toilet-paper-driving-climate-crisis-every-flush'target="_blank">Activists</a> argue toilet paper is partially responsible for the
+                deforestation and high emission rates in Canada's boreal forests. Major shareholders in the toilet paper industry, like
+                Procter & Gamble, Kimberly-Clark and Costco rely on the forest's <a href ='https://www.yuanhuapaper.com/virgin-wood-pulp-or-pure-wood-pulp-for-toilet-paper/#:~:text=The%20production%20process%20for%20virgin,in%20premium%20toilet%20paper%20brands.'target="_blank">virgin wood pulp</a> to produce softer and more absorbent toilet
+                paper.</p>
+                <p>If all toilet paper were made with virgin wood pulp, the U.S would need to cut down over 65.5 million trees annually for
+                consumers, according to a <a href='https://drive.google.com/file/d/1IOBDcixSgD5Lgz2gT3UmPb0i4EIvI4bs/view?pli=1'target="_blank">2022 report</a> by environmental impact consultancy Edge.</p>
+                <p>The study also found that cutting down trees for toilet paper in the U.S. can prevent forests from absorbing 17 million
+                metric tons of carbon dioxide each year—an amount of emissions equal to a gas-powered car driving 43 billion miles.*</p>
+                <p>Procter & Gamble's CEO Jon R. Moeller said the company will improve environmental sustainability without compromising
+                the company's economic performance.</p>
+                <p>“Sacrificing performance for environmental sustainability does not delight consumers and does nothing to create a more
+                sustainable business or planet,” Moeller said at last fall's 2024 Investor Day in Cincinnati.</p>
+                <p>Law firm <a href='https://www.businesswire.com/news/home/20250116470731/en/Hagens-Berman-Consumer-Lawsuit-Alleges-Widespread-Deforestation-Behind-Charmin-Toilet-Papers-Greenwashed-Facade'target="_blank">Hagens Berman</a> filed a class-action lawsuit in January accusing the company of greenwashing and
+                misleading toilet paper consumers, despite its role in damaging Canada's boreal forests.</p>
+                <p>---------------------------------------------------------------------------------------------------</p>
+                <p>Ananya Chetia is a data journalist at Columbia University.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $parallaxElement = $('.floating-icons');
+            var elementHeight = $parallaxElement.outerHeight();
+
+            function parallax() {
+                var scrollPos = $(window).scrollTop();
+                var transformValue = scrollPos / 40;
+
+                if (scrollPos < elementHeight) {
+                    $parallaxElement.css({
+                        'transform': 'translate3d(0, -' + transformValue + '%, 0)'
+                    });
+                }
+            }
+
+            $(window).scroll(function () {
+                parallax();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+"fonts": [
+    {
+    "aifont": "Chalkduster",
+    "family": "Skia",
+    "weight": "400",
+    "style": ""
+    },
+    {
+    "aifont": "Chalkduster",
+    "family": "Skia",
+    "weight": "700",
+    "style": ""
+    },
+    {
+    "aifont": "Skia-Regular",
+    "family": "Skia",
+    "weight": "400",
+    "style": ""
+    },
+    {
+    "aifont": "Skia-Bold",
+    "family": "Skia",
+    "weight": "700",
+    "style": ""
+    }
+]
+}
