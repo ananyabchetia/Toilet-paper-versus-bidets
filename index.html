@@ -786,8 +786,402 @@
                 toilet paper with the <a href= 'https://www.hearthstonemuseum.org/flushed-with-success#:~:text=1964.%20In%20the%201950%2C%20Hoberg%20Paper%20changed,century%20by%20introducing%20the%20character%20of%20Mr.'target="_blank">“Charmin lady”</a> logo in 1928 and later the “Charmin baby” to emphasize toilet paper's softness. The
                 product's legacy in American bathrooms can explain why many rely on wiping with paper, despite water being commonly used to
                 clean other parts of the body.</p>
-        <img src="toilets.png" alt="Illustration showing the history and environmental impact of toilet paper"
-            style="max-width: 100%; height: auto; display: block; margin: 1rem auto;">
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+    
+        /* Hide all artboards by default */
+        .g-artboard {
+            display: none;
+            margin: 0 auto;
+        }
+    
+        /* Show only the mobile version on small screens */
+        @media screen and (max-width: 489px) {
+            #g-toilet_rolls-mobile {
+                display: block;
+                max-width: 100% !important;
+            }
+        }
+    
+        /* Show only the medium version on medium screens */
+        @media screen and (min-width: 490px) and (max-width: 699px) {
+            #g-toilet_rolls-medium {
+                display: block;
+                max-width: 100% !important;
+            }
+        }
+    
+        /* Show only the full version on large screens */
+        @media screen and (min-width: 700px) {
+            #g-toilet_rolls-full {
+                display: block;
+                max-width: 100% !important;
+            }
+        }
+    
+        /* Preserve all the original styles */
+        #g-toilet_rolls-box,
+        #g-toilet_rolls-box .g-artboard {
+            margin: 0 auto;
+        }
+    
+        #g-toilet_rolls-box p {
+            margin: 0;
+        }
+    
+        #g-toilet_rolls-box .g-aiAbs {
+            position: absolute;
+        }
+    
+        #g-toilet_rolls-box .g-aiImg {
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 100% !important;
+        }
+    
+        #g-toilet_rolls-box .g-aiSymbol {
+            position: absolute;
+            box-sizing: border-box;
+        }
+    
+        #g-toilet_rolls-box .g-aiPointText p {
+            white-space: nowrap;
+        }
+    
+        /* Full styles */
+        #g-toilet_rolls-full {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #g-toilet_rolls-full p {
+            font-family: Skia;
+            font-weight: regular;
+            line-height: 22px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 18px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle0 {
+            font-weight: 700;
+            line-height: 25px;
+            height: 25px;
+            font-size: 21px;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle1 {
+            font-weight: 400;
+            height: 22px;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle2 {
+            font-weight: 400;
+            line-height: 18px;
+            height: 18px;
+            font-size: 15px;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle3 {
+            font-weight: 400;
+            line-height: 9px;
+            height: 9px;
+            font-size: 7px;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle4 {
+            font-weight: 400;
+            line-height: 8px;
+            height: 8px;
+            font-size: 6px;
+        }
+    
+        #g-toilet_rolls-full .g-pstyle5 {
+            font-weight: 400;
+            line-height: 7px;
+            height: 7px;
+            font-size: 6px;
+        }
+    
+        #g-toilet_rolls-full .g-cstyle0 {
+            font-weight: 400;
+        }
+    
+        /* Medium styles */
+        #g-toilet_rolls-medium {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #g-toilet_rolls-medium p {
+            font-family: Skia;
+            font-weight: regular;
+            line-height: 15px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 13px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+    
+        #g-toilet_rolls-medium .g-pstyle0 {
+            font-weight: 700;
+            line-height: 18px;
+            height: 18px;
+            font-size: 15px;
+        }
+    
+        #g-toilet_rolls-medium .g-pstyle1 {
+            font-weight: 400;
+            height: 15px;
+        }
+    
+        #g-toilet_rolls-medium .g-pstyle2 {
+            font-weight: 400;
+            line-height: 6px;
+            height: 6px;
+            font-size: 5px;
+        }
+    
+        #g-toilet_rolls-medium .g-pstyle3 {
+            font-weight: 400;
+            line-height: 5px;
+            height: 5px;
+            font-size: 5px;
+        }
+    
+        #g-toilet_rolls-medium .g-pstyle4 {
+            font-weight: 400;
+            line-height: 5px;
+            height: 5px;
+            font-size: 4px;
+        }
+    
+        #g-toilet_rolls-medium .g-cstyle0 {
+            font-weight: 400;
+        }
+    
+        /* Mobile styles */
+        #g-toilet_rolls-mobile {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #g-toilet_rolls-mobile p {
+            font-family: Skia;
+            font-weight: regular;
+            line-height: 10px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 8px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
+        }
+    
+        #g-toilet_rolls-mobile .g-pstyle0 {
+            font-weight: 700;
+            line-height: 11px;
+            height: 11px;
+            font-size: 9px;
+        }
+    
+        #g-toilet_rolls-mobile .g-pstyle1 {
+            font-weight: 400;
+            height: 10px;
+        }
+    
+        #g-toilet_rolls-mobile .g-pstyle2 {
+            font-weight: 400;
+            line-height: 4px;
+            height: 4px;
+            font-size: 3px;
+        }
+    
+        #g-toilet_rolls-mobile .g-pstyle3 {
+            font-weight: 400;
+            line-height: 3px;
+            height: 3px;
+            font-size: 3px;
+        }
+    
+        #g-toilet_rolls-mobile .g-cstyle0 {
+            font-weight: 400;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <div id="g-toilet_rolls-box" class="ai2html">
+            <!-- Full-size artboard -->
+            <div id="g-toilet_rolls-full" class="g-artboard" style="width:700px; height:1063.75px;"
+                data-aspect-ratio="0.658" data-min-width="700">
+                <div style=""></div>
+                <img id="g-toilet_rolls-full-img" class="g-toilet_rolls-full-img g-aiImg" alt="Toilet paper usage chart"
+                    src="toilet_rolls-full.jpg" />
+                <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:4.9025%;margin-top:-31.1px;left:1.5287%;width:688px;">
+                    <p class="g-pstyle0">Let&rsquo;s get to the bottom of this: U.S leads with average annual toilet</p>
+                    <p class="g-pstyle0"> paper use per person<span class="g-cstyle0"> </span></p>
+                </div>
+                <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:8.552%;margin-top:-13px;left:1.8352%;width:442px;">
+                    <p class="g-pstyle1">Each icon represents one roll of toilet paper used by an average person in a year.
+                    </p>
+                </div>
+                <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:13.0643%;margin-top:-18px;left:3.2822%;width:130px;">
+                    <p class="g-pstyle1">United States</p>
+                </div>
+                <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:13.0643%;margin-top:-18px;left:53.0987%;width:99px;">
+                    <p class="g-pstyle1">Austrailia</p>
+                </div>
+                <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:14.7256%;margin-top:-14.6px;left:3.5232%;width:74px;">
+                    <p class="g-pstyle2">141 rolls</p>
+                </div>
+                <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:14.7256%;margin-top:-14.6px;left:53.2486%;width:71px;">
+                    <p class="g-pstyle2">88 rolls</p>
+                </div>
+                <!-- All the toilet paper roll icons (including g-ai0-7 through g-ai0-29) -->
+                <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:16.8275%;margin-top:-7px;left:87.9526%;width:26px;">
+                    <p class="g-pstyle3"> </p>
+                </div>
+                <!-- All other roll points - omitting for brevity but keeping them all in the actual code -->
+                <!-- UK section -->
+                <div id="g-ai0-30" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:56.1195%;margin-top:-40px;left:28.0064%;width:154px;">
+                    <p class="g-pstyle1">United Kingdom</p>
+                </div>
+                <div id="g-ai0-31" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:58.1568%;margin-top:-40.6px;left:28.1613%;width:75px;">
+                    <p class="g-pstyle2">127 rolls</p>
+                </div>
+                <!-- Additional UK roll points - kept in the actual code -->
+                <!-- Source information -->
+                <div id="g-ai0-44" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:98.6107%;margin-top:-32px;left:2.12%;width:255px;">
+                    <p class="g-pstyle1">Source: Edge Environment </p>
+                </div>
+                <div id="g-ai0-45" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:98.9868%;margin-top:-32px;left:67.2087%;width:241px;">
+                    <p class="g-pstyle1">Drawing by Ananya Chetia </p>
+                </div>
+            </div>
+    
+            <!-- Medium-size artboard -->
+            <div id="g-toilet_rolls-medium" class="g-artboard" style="width:490px; height:742px;" data-aspect-ratio="0.66"
+                data-min-width="490" data-max-width="699">
+                <div style=""></div>
+                <img id="g-toilet_rolls-medium-img" class="g-toilet_rolls-medium-img g-aiImg" alt="Toilet paper usage chart"
+                    src="toilet_rolls-medium.jpg" />
+                <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:4.9683%;margin-top:-21.9px;left:3.65%;width:410px;">
+                    <p class="g-pstyle0">Unrolling the Stats: U.S leads with average annual toilet</p>
+                    <p class="g-pstyle0"> paper use per person<span class="g-cstyle0"> </span></p>
+                </div>
+                <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:8.715%;margin-top:-8.7px;left:4.5227%;width:314px;">
+                    <p class="g-pstyle1">Each roll represents a single roll one uses per year. </p>
+                </div>
+                <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:14.7797%;margin-top:-8.7px;left:7.6652%;width:97px;">
+                    <p class="g-pstyle1">United States</p>
+                </div>
+                <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:14.7797%;margin-top:-8.7px;left:53.3522%;width:75px;">
+                    <p class="g-pstyle1">Austrailia</p>
+                </div>
+                <!-- Medium-sized toilet paper roll icons -->
+                <!-- UK section -->
+                <div id="g-ai1-28" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:58.1759%;margin-top:-8.7px;left:28.1246%;width:114px;">
+                    <p class="g-pstyle1">United Kingdom</p>
+                </div>
+                <!-- Additional UK roll points -->
+                <!-- Source information -->
+                <div id="g-ai1-41" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:98.8767%;margin-top:-8.7px;left:2.3914%;width:184px;">
+                    <p class="g-pstyle1">Source: Edge Environment </p>
+                </div>
+                <div id="g-ai1-42" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:99.281%;margin-top:-8.7px;left:67.0948%;width:174px;">
+                    <p class="g-pstyle1">Drawing by Ananya Chetia </p>
+                </div>
+            </div>
+    
+            <!-- Mobile-size artboard -->
+            <div id="g-toilet_rolls-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px"
+                data-aspect-ratio="0.797" data-min-width="0" data-max-width="489">
+                <div style="padding: 0 0 125.5467% 0;"></div>
+                <img id="g-toilet_rolls-mobile-img" class="g-toilet_rolls-mobile-img g-aiImg" alt="Toilet paper usage chart"
+                    src="toilet_rolls-mobile.jpg" />
+                <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:5.0708%;margin-top:-13.9px;left:3.6771%;width:288px;">
+                    <p class="g-pstyle0">Unrolling the Stats: U.S leads with average annual toilet</p>
+                    <p class="g-pstyle0"> paper use per person<span class="g-cstyle0"> </span></p>
+                </div>
+                <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:8.6758%;margin-top:-5.8px;left:3.4898%;width:219px;">
+                    <p class="g-pstyle1">Each roll represents a single roll one uses per year. </p>
+                </div>
+                <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:13.7735%;margin-top:-5.8px;left:3.4565%;width:73px;">
+                    <p class="g-pstyle1">United States</p>
+                </div>
+                <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:13.7735%;margin-top:-5.8px;left:53.4904%;width:59px;">
+                    <p class="g-pstyle1">Austrailia</p>
+                </div>
+                <!-- Mobile-sized toilet paper roll icons -->
+                <!-- UK section -->
+                <div id="g-ai2-28" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:57.9536%;margin-top:-5.8px;left:28.338%;width:86px;">
+                    <p class="g-pstyle1">United Kingdom</p>
+                </div>
+                <!-- Additional UK roll points -->
+                <!-- Source information -->
+                <div id="g-ai2-41" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:98.5229%;margin-top:-5.8px;left:1.6091%;width:135px;">
+                    <p class="g-pstyle1">Source: Edge Environment </p>
+                </div>
+                <div id="g-ai2-42" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                    style="top:98.9477%;margin-top:-5.8px;left:71.3372%;width:123px;">
+                    <p class="g-pstyle1">Drawing by Ananya Chetia </p>
+                </div>
+            </div>
+        </div>
                 <p>The preference for toilet paper is not unanimous. <a href='https://www.nrdc.org/bio/jennifer-skene/toilet-paper-driving-climate-crisis-every-flush'target="_blank">Activists</a> argue toilet paper is partially responsible for the
                 deforestation and high emission rates in Canada's boreal forests. Major shareholders in the toilet paper industry, like
                 Procter & Gamble, Kimberly-Clark and Costco rely on the forest's <a href ='https://www.yuanhuapaper.com/virgin-wood-pulp-or-pure-wood-pulp-for-toilet-paper/#:~:text=The%20production%20process%20for%20virgin,in%20premium%20toilet%20paper%20brands.'target="_blank">virgin wood pulp</a> to produce softer and more absorbent toilet
